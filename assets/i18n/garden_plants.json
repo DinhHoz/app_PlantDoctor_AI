@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Sầu riêng",
+    "type": "fruit",
+    "imageUrl": "assets/images/sau-rieng.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Cà chua",
+    "type": "fruit",
+    "imageUrl": "assets/images/ca-chua.jpg"
+  }
+]
