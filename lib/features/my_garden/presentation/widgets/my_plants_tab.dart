@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:app_plant_doctor_ai/features/my_garden/presentation/bloc/garden_bloc.dart';
 import 'package:app_plant_doctor_ai/features/my_garden/presentation/bloc/garden_state.dart';
 import 'package:app_plant_doctor_ai/features/my_garden/presentation/widgets/plant_card.dart';
+import 'package:app_plant_doctor_ai/features/my_garden/presentation/widgets/add_plant_bottom_sheet.dart';
 
 class MyPlantsTab extends StatelessWidget {
   const MyPlantsTab({super.key});
@@ -17,9 +18,12 @@ class MyPlantsTab extends StatelessWidget {
           height: 55,
           child: ElevatedButton.icon(
             onPressed: () {
-              // TODO: Navigate to Add Plant Screen
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text("Navigate to Add Plant")),
+              showModalBottomSheet(
+                context: context,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+                ),
+                builder: (context) => const AddPlantBottomSheet(),
               );
             },
             icon: const Icon(Icons.add, size: 28),
